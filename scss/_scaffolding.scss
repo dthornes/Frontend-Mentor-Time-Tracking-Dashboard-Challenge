@@ -1,0 +1,16 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  background: $background;
+  font-family: "Sebino Regular", serif;
+}
+
+p {
+  margin: 0;
+}
+
+small {
+  color: $tertiary;
+}

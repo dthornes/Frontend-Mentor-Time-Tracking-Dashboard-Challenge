@@ -1,0 +1,130 @@
+$card-colours: (
+  'orange': (
+    'hex': $orange,
+    'icon': 'icon-work.svg'
+  ),
+  'blue': (
+    'hex': $blue,
+    'icon': 'icon-play.svg',
+  ),
+  'red': (
+    'hex': $red,
+    'icon': 'icon-study.svg',
+  ),
+  'green': (
+    'hex': $green,
+    'icon': 'icon-exercise.svg',
+  ),
+  'purple': (
+    'hex': $purple,
+    'icon': 'icon-social.svg',
+  ),
+  'yellow': (
+    'hex': $yellow,
+    'icon': 'icon-self-care.svg',
+  ),
+);
+
+.card {
+  background: $primary;
+  border-radius: 10px;
+  color: $light;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+
+  &__header {
+    background: $secondary;
+    border-radius: 10px;
+    padding: 20px;
+  }
+
+  &__body {
+    background: $primary;
+    height: 100%;
+    padding: 20px;
+    z-index: 2;
+
+    &:hover {
+      background: lighten($primary, 15%);
+    }
+  }
+
+  &__image {
+    max-width: 80px;
+    border: 3px solid $light {
+      radius: 50%;
+    };
+  }
+
+  &__ellipsis {
+    color: $tertiary;
+    cursor: pointer;
+    font-size: 26px;
+    line-height: 8px;
+
+    &:hover {
+      color: $light;
+    }
+  }
+
+  &__list {
+    color: $tertiary;
+    padding: 0;
+    list-style: none;
+    margin: 0;
+
+    @media (max-width: 768px) {
+      display: flex;
+      justify-content: space-between;
+    }
+
+
+    &-item {
+      cursor: pointer;
+      margin-bottom: 10px;
+
+      &:hover {
+        color: $light;
+      }
+
+      @media (max-width: 768px) {
+        display: inline-block;
+        margin-bottom: 0;
+      }
+
+      &--active {
+        color: $light;
+      }
+    }
+  }
+
+  &__title {
+    font-size: 42px;
+    margin: 10px 0;
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+
+    &--column {
+      flex-direction: column;
+    }
+  }
+
+  @each $colour, $data in $card-colours {
+    &--#{$colour} {
+      background: map-get($data, 'hex');
+      padding-top: 50px;
+
+      &:after {
+        content: url("/images/#{map-get($data, 'icon')}");
+        position: absolute;
+        top: 0;
+        right: 15px;
+        z-index: -1;
+      }
+    }
+  }
+}

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+    <title>Frontend Mentor | Time tracking dashboard</title>
+
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+
+<div class="grid__wrapper">
+    <div class="grid__container">
+        <section class="grid__item--tall card">
+            <header class="card__header">
+                <img src="/images/image-jeremy.png" alt="Jeremy Robson Avatar" class="card__image">
+                <h1>
+                    <small>Report for</small><br>
+                    Jeremy Robson
+                </h1>
+            </header>
+
+            <main class="card__body">
+                <ul class="card__list">
+                    <li class="card__list-item js-filter" data-filter="daily">Daily</li>
+                    <li class="card__list-item card__list-item--active js-filter" data-filter="weekly">Weekly</li>
+                    <li class="card__list-item js-filter" data-filter="monthly">Monthly</li>
+                </ul>
+            </main>
+        </section>
+
+        <section class="card card--orange">
+            <div class="card__body">
+                <div class="card__row">
+                    Work
+                    <span class="card__ellipsis">...</span>
+                </div>
+                <div class="card__row card__row--column">
+                    <div class="js-filter__item js-filter__item--daily hidden">
+                        <h2 class="card__title">5hrs</h2> <!-- daily -->
+                        <p><small>Yesterday - 7hrs</small></p> <!-- daily -->
+                    </div>
+                    <div class="js-filter__item js-filter__item--weekly">
+                        <h2 class="card__title">32hrs</h2> <!-- weekly -->
+                        <p><small>Last Week - 36hrs</small></p> <!-- weekly -->
+                    </div>
+                    <div class="js-filter__item js-filter__item--monthly hidden">
+                        <h2 class="card__title">103hrs</h2> <!-- monthly -->
+                        <p><small>Last Month - 128hrs</small></p> <!-- monthly -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="card card--blue">
+            <div class="card__body">
+                <div class="card__row">
+                    Play
+                    <span class="card__ellipsis">...</span>
+                </div>
+                <div class="card__row card__row--column">
+                    <div class="js-filter__item js-filter__item--daily hidden">
+                        <h2 class="card__title">1hr</h2> <!-- daily -->
+                        <p><small>Yesterday - 2hrs</small></p> <!-- daily -->
+                    </div>
+                    <div class="js-filter__item js-filter__item--weekly">
+                        <h2 class="card__title">10hrs</h2> <!-- weekly -->
+                        <p><small>Last Week - 8hrs</small></p> <!-- weekly -->
+                    </div>
+                    <div class="js-filter__item js-filter__item--monthly hidden">
+                        <h2 class="card__title">23hrs</h2> <!-- monthly -->
+                        <p><small>Last Month - 29hrs</small></p> <!-- monthly -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="card card--red">
+            <div class="card__body">
+                <div class="card__row">
+                    Study
+                    <span class="card__ellipsis">...</span>
+                </div>
+                <div class="card__row card__row--column">
+                    <div class="js-filter__item js-filter__item--daily hidden">
+                        <h2 class="card__title">0hrs </h2><!-- daily -->
+                        <p><small>Yesterday - 1hr</small></p> <!-- daily -->
+                    </div>
+                    <div class="js-filter__item js-filter__item--weekly">
+                        <h2 class="card__title">4hrs</h2> <!-- weekly -->
+                        <small>Last Week - 7hrs</small> <!-- weekly -->
+                    </div>
+                    <div class="js-filter__item js-filter__item--monthly hidden">
+                        <h2 class="card__title">13hrs</h2> <!-- monthly -->
+                        <p><small>Last Month - 19hrs</small></p> <!-- monthly -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="card card--green">
+            <div class="card__body">
+                <div class="card__row">
+                    Exercise
+                    <span class="card__ellipsis">...</span>
+                </div>
+                <div class="card__row card__row--column">
+                    <div class="js-filter__item js-filter__item--daily hidden">
+                        <h2 class="card__title">1hr </h2><!-- daily -->
+                        <p><small>Yesterday - 1hr</small></p> <!-- daily -->
+                    </div>
+                    <div class="js-filter__item js-filter__item--weekly">
+                        <h2 class="card__title">4hrs</h2> <!-- weekly -->
+                        <small>Last Week - 5hrs</small> <!-- weekly -->
+                    </div>
+                    <div class="js-filter__item js-filter__item--monthly hidden">
+                        <h2 class="card__title">11hrs</h2> <!-- monthly -->
+                        <p><small>Last Month - 18hrs</small></p> <!-- monthly -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="card card--purple">
+            <div class="card__body">
+                <div class="card__row">
+                    Social
+                    <span class="card__ellipsis">...</span>
+                </div>
+                <div class="card__row card__row--column">
+                    <div class="js-filter__item js-filter__item--daily hidden">
+                        <h2 class="card__title">1hr </h2><!-- daily -->
+                        <p><small>Yesterday - 3hrs</small></p> <!-- daily -->
+                    </div>
+                    <div class="js-filter__item js-filter__item--weekly">
+                        <h2 class="card__title">5hrs</h2> <!-- weekly -->
+                        <small>Last Week - 10hrs</small> <!-- weekly -->
+                    </div>
+                    <div class="js-filter__item js-filter__item--monthly hidden">
+                        <h2 class="card__title">21hrs</h2> <!-- monthly -->
+                        <p><small>Last Month - 23hrs</small></p> <!-- monthly -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="card card--yellow">
+            <div class="card__body">
+                <div class="card__row">
+                    Self Care
+                    <span class="card__ellipsis">...</span>
+                </div>
+                <div class="card__row card__row--column">
+                    <div class="js-filter__item js-filter__item--daily hidden">
+                        <h2 class="card__title">0hrs </h2><!-- daily -->
+                        <p><small>Yesterday - 1hr</small></p> <!-- daily -->
+                    </div>
+                    <div class="js-filter__item js-filter__item--weekly">
+                        <h2 class="card__title">2hrs</h2> <!-- weekly -->
+                        <small>Last Week - 2hrs</small> <!-- weekly -->
+                    </div>
+                    <div class="js-filter__item js-filter__item--monthly hidden">
+                        <h2 class="card__title">7hrs </h2><!-- monthly -->
+                        <p><small>Last Month - 11hrs</small></p> <!-- monthly -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+<div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.<br>
+    Coded by <a href="#">Dan Thornes</a>.
+</div>
+
+<script
+        src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        crossorigin="anonymous"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
