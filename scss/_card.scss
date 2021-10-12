@@ -119,7 +119,7 @@ $card-colours: (
       padding-top: 50px;
 
       &:after {
-        content: url("/images/#{map-get($data, 'icon')}");
+        content: url("images/#{map-get($data, 'icon')}");
         position: absolute;
         top: 0;
         right: 15px;
